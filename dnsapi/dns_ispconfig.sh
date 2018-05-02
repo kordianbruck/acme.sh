@@ -160,7 +160,7 @@ _ISPC_rmTxt() {
       *)
         unset IFS
         _info "Retrieved Record ID."
-        curData="{\"session_id\":\"${sessionID}\",\"primary_id\":\"${record_id}\"}"
+        curData="{\"session_id\":\"${sessionID}\",\"primary_id\":\"${record_id}\",\"update_serial\":true}"
         curResult="$(_post "${curData}" "${ISPC_Api}?dns_txt_delete")"
         _debug "Calling _ISPC_rmTxt: '${curData}' '${ISPC_Api}?dns_txt_delete'"
         _debug "Result of _ISPC_rmTxt: '$curResult'"
